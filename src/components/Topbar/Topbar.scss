@@ -1,0 +1,250 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  color: black;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 2.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  line-height: 48px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.3em;
+  transition: all 1s ease;
+  display: flex;
+  flex-direction: column;
+
+ a {
+   text-decoration: none;
+   &:active{
+    transform: scale(0.97);
+    transition: transform 700ms ease;
+    color: #d1342fff;
+   }
+   &:visited{
+     color: black;
+   }
+ }
+
+ 
+
+  .switch {
+    /* background-color: black; */
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 100%;
+    
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+     
+
+      &:checked + .slider {
+        background-color: #121212;
+      }
+      &:focus + .slider {
+        box-shadow: 0 0 1px #121212;
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 10px;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+     
+
+      &.round {
+        border-radius: 34px;
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .border__bottom {
+      width: 80%;
+      transition: width 700ms ease-in-out;
+    }
+  }
+
+  .border__bottom {
+    height: 1px;
+    outline: 0;
+    padding: 0 auto;
+    width: 40%;
+    background-color: black;
+    align-self: center;
+
+    &.dark{
+      background-color: white;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+
+        &.dark{
+          li{
+            color: white;
+          }
+        
+        }
+
+        @include mobile {
+          display: none;
+        }
+
+        li {
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(0.97);
+            transition: transform 700ms ease;
+          }
+        }
+      }
+
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        cursor: pointer;
+
+        @include mobile {
+          display: none;
+        }
+
+        .icon {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        @include mobile {
+          display: flex;
+        }
+
+        &.dark{
+          span {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transform-origin: left;
+            transition: all 2s ease;
+  
+           
+          }
+
+          .line1,
+          .line2,
+          .line3{
+            background-color: white;
+          }
+
+        }
+      
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+
+         
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+
+          
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

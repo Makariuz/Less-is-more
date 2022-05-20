@@ -1,0 +1,62 @@
+@import '../../global.scss';
+
+.menu{
+    width: 180px;
+    height: 100vh;
+    background-color: #121212fd;
+    
+    top:0;
+    right: -180px; 
+    position:fixed;
+    z-index: 2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+    &.active{
+        right: 0;
+    }
+
+    @include apple_watch{
+        top: 70px;
+        width: 100px;
+        right: -100px;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 30px;
+        font-weight: 300;
+        color: white;
+        width: 60%;
+
+        @include apple_watch{
+            font-size: 1rem;
+            
+        }
+
+        li{
+            margin-bottom: 20px;
+            @include apple_watch{
+                margin-bottom: 3px;
+               
+                
+            }
+            a{
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover{
+                font-weight: 500;
+            }
+        }
+    }
+}

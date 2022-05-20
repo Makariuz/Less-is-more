@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,600;8..144,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,600;8..144,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Press+Start+2P&family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,600;8..144,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+$mainColor: #121212;
+
+$width: 760px;
+
+$width_mid_min: 761px;
+$width_mid_max: 1025px;
+
+$project_width_min: 600px;
+$project_width_max: 760px; 
+
+
+$apple_watch_max: 197px; 
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (max-width: #{$width_mid_max}) and (min-width: #{$width_mid_min}){
+        @content
+    }
+};
+
+@mixin projects {
+    @media (max-width: #{$project_width_max}) and (min-width: #{$project_width_min}){
+        @content
+    }
+};
+
+@mixin apple_watch{
+    @media (max-width: #{$apple_watch_max}){
+        @content
+    }
+}

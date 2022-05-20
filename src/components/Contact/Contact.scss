@@ -1,0 +1,226 @@
+@import "../../global.scss";
+
+.contact {
+  /* background-color: lightblue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a{
+    text-decoration: none;
+    color: #f18960;
+    &:visited{
+      text-decoration: none;
+      color: #f18960;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .socials__acc {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3rem;
+    color: #f18960;
+
+  
+
+    .links{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        font-size: 1.3rem;
+      }
+    }
+
+    @include mobile {
+       visibility: hidden;
+       height: 10%;
+        width: 100%;
+        display: flex;
+       
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 3rem;
+        color: #f18960;
+    }
+  }
+
+
+  .socials__mobile{
+      display:none;
+  }
+  
+  @include mobile {
+
+    .socials__mobile {
+        height: 10%;
+        width: 100%;
+        display: flex;
+       
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 3rem;
+        color: #f18960;
+        @include apple_watch {
+          height: 100%;
+         
+      }
+
+      }
+      
+  }
+
+
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80%;
+
+    border-radius: 10px;
+    background-color: #f18960;
+    background-image: linear-gradient(315deg, #f18960 0%, #f8bc9c 74%);
+
+ 
+  
+
+    @include mobile {
+        width: 90%;
+        height: 70%;
+    }
+
+    h2 {
+      font-size: 3rem;
+      @include mobile {
+     text-align: center;
+     font-size: 2rem;
+     
+    }
+    @include apple_watch {
+      font-size: .9rem;
+     
+  }
+    }
+
+    form {
+      margin: 10px;
+      width: 50%;
+      height: 80%;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: white;
+      position: relative;
+      outline: 1px solid black;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+
+      @include tablet {
+        width: 60%;
+        }
+      @include mobile {
+          width: 90%;
+          gap: 5px;
+          padding: 10px;
+      }
+
+     
+
+      @include apple_watch {
+       display:none;
+    }
+
+      label {
+        font-size: 1.5rem;
+      }
+      input {
+        width: 90%;
+        height: 30px;
+        font-size: 1rem;
+        outline: 0;
+        border-radius: 10px;
+        border: 0;
+        padding: 10px;
+        background-color: #f6e7df;
+
+        &::placeholder {
+          color: black;
+          font-style: italic;
+        }
+
+       
+      }
+
+      textarea {
+        margin-top: 5px;
+        resize: none;
+        width: 90%;
+        height: 200px;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 10px;
+        border: 0;
+        background-color: #f6e7df;
+
+        &::placeholder {
+          color: black;
+          font-style: italic;
+        }
+
+     
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: #d1342fff;
+        border: none;
+        border-radius: 10px;
+        padding: 20px 10px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+
+
+        @include mobile {
+            padding: 20px 25px;
+            margin: 5px;
+            overflow: hidden;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:disabled{
+          background-color: lightgray;
+          color: darkgrey;
+        }
+      }
+      span {
+        color: green;
+      }
+    }
+
+
+  }
+}

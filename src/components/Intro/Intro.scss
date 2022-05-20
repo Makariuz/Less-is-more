@@ -1,0 +1,442 @@
+@import "../../global.scss";
+
+.intro {
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+   
+
+  }
+  @include apple_watch {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
+      flex: 0.4;
+      width: 100vw;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    @include tablet {
+      flex: 0.4;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include apple_watch {
+     display: none;
+    }
+    .imgContainer {
+      border: 1px solid black;
+      border-right: 0px;
+      border-radius: 20px 0px 0px 20px;
+      height: 70%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      overflow: hidden;
+
+      &.dark {
+        border: 1px solid white;
+        border-right: 0px;
+        color: white;
+      }
+
+      @include mobile {
+        height: 90%;
+        border: 1px solid black;
+        border-bottom: 0px;
+        border-radius: 20px 20px 0px 0px;
+        &.dark {
+          border: 1px solid white;
+          border-bottom: 0px;
+          color: white;
+        }
+      }
+
+      @include tablet {
+        height: 90%;
+        border: 1px solid black;
+        border-bottom: 0px;
+        border-radius: 20px 20px 0px 0px;
+        &.dark {
+          border: 1px solid white;
+          border-bottom: 0px;
+          color: white;
+        }
+      }
+      img {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 70%;
+
+        transform: scale(1.5);
+        @include mobile {
+          height: 60%;
+          overflow: hidden;
+        }
+        @include tablet {
+          height: 70%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex: 0.6;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100vw;
+    }
+
+    @include tablet {
+      flex: 0.6;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100vw;
+    }
+
+    @include apple_watch {
+      flex: 1;
+    }
+    .wrapper {
+      position: relative;
+      border: 1px solid black;
+      border-left: 0px;
+      border-radius: 0px 20px 20px 0px;
+      height: 70%;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 2rem;
+      padding: 10px;
+
+      &.dark {
+        border: 1px solid white;
+        color: white;
+      }
+
+      @include mobile {
+        justify-content: center;
+
+        border: 1px solid black;
+        border-top: 0px;
+        border-radius: 0px 0px 20px 20px;
+
+        font-size: 2rem;
+
+        h2 {
+          display: none;
+        }
+      }
+
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-top: 0px;
+        border-radius: 0px 0px 20px 20px;
+
+        font-size: 3rem;
+
+        h2 {
+          display: none;
+        }
+      }
+
+      @include apple_watch {
+        border: 1px solid black;
+        border-radius: 20px;
+        font-size: .5rem;
+      }
+
+      &.hide {
+        display: none;
+      }
+      span {
+        color: #d1342fff;
+      }
+
+      &:hover {
+        .click__arrow {
+          position: absolute;
+          font-size: 1rem;
+          bottom: 25%;
+          animation: pointClick 800ms infinite;
+
+          opacity: 0;
+
+          @keyframes pointClick {
+            50% {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      p {
+        position: relative;
+        cursor: pointer;
+        .click__arrow {
+          opacity: 0;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+
+        @include apple_watch {
+          width:10px;
+          
+        }
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @include mobile {
+        left: 50%;
+      }
+
+      @include tablet {
+        left: 50%;
+      }
+
+      @include apple_watch {
+        left:50%;
+        
+      }
+
+      
+    }
+
+    .about__me {
+      position: relative;
+      border: 1px solid black;
+      border-left: 0px;
+      border-radius: 0px 20px 20px 0px;
+      height: 70%;
+      width: 70%;
+      display: none;
+      flex-direction: column;
+
+      justify-content: center;
+      font-size: 2rem;
+      padding: 10px;
+
+     
+
+      &.dark {
+        border: 1px solid white;
+        border-left: 0px;
+        color: white;
+        @include apple_watch {
+     
+          border: 1px solid white;
+          border-radius:20px;
+        }
+      }
+
+      .about__me__p_mobile{
+        display:none;
+
+        @include apple_watch {
+          display: flex;
+
+      
+        }
+      }
+      
+
+      @include mobile {
+        justify-content: flex-start;
+        border: 1px solid black;
+        border-top: 0px;
+        border-radius: 0px 0px 20px 20px;
+
+        font-size: 1.2rem;
+
+        @include apple_watch {
+   
+          border: 1px solid black;
+          border-radius:20px;
+        }
+
+        &.dark {
+          border: 1px solid white;
+          border-top: 0px;
+          color: white;
+
+          @include apple_watch {
+   
+            border: 1px solid white;
+            border-radius:20px;
+          }
+        }
+
+        h4 {
+          height: 15%;
+          text-align: center;
+          @include apple_watch {
+            display: none;
+        
+          }
+        }
+
+        h2 {
+          display: none;
+        }
+
+        .about__me__p {
+          margin: 5px;
+          padding: 5px;
+          @include apple_watch {
+            display: none;
+        
+          }
+        }
+      }
+
+  
+
+      
+      @include tablet {
+        justify-content: flex-start;
+        border: 1px solid black;
+        border-top: 0px;
+        border-radius: 0px 0px 20px 20px;
+
+        font-size: 1.2rem;
+
+        &.dark {
+          border: 1px solid white;
+          border-top: 0px;
+          color: white;
+        }
+
+        h4 {
+          height: 15%;
+          text-align: center;
+        }
+
+        h2 {
+          display: none;
+        }
+
+        .about__me__p {
+          margin: 5px;
+          padding: 5px;
+
+        
+        }
+      }
+
+      &.hide {
+        display: flex;
+      }
+      /* https://colorhunt.co/palettes/brown */
+      span {
+        color: #8e3200;
+      }
+
+      hr {
+        margin: 10px;
+        @include apple_watch {
+          display: none;
+      
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 10px;
+        @include apple_watch {
+   
+          margin: 2px;
+          font-size: .6rem;
+          text-align: center;
+        }
+      }
+
+      .down__arrow {
+        opacity: 0.5;
+        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        animation: opaque 6s infinite;
+        cursor: pointer;
+
+        @keyframes opaque {
+          50% {
+            opacity: 0%;
+          }
+        }
+      }
+
+      button {
+        background-color: #121212;
+        color: white;
+        font-size: 1rem;
+        align-self: center;
+        justify-self: center;
+        padding: 5px 25px;
+        outline: none;
+        border: 0;
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        @include apple_watch {
+          display: none;
+      
+        }
+
+        &:active,
+        &:hover {
+          border: 1px solid #121212;
+          background-color: white;
+          color: #121212;
+          padding: 4px 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
