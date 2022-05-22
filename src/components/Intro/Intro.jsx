@@ -7,6 +7,7 @@ import { FaRegHandPointer } from "react-icons/fa";
 import { AiOutlineDown } from "react-icons/ai";
 
 import me from '../images/logoofme.png'
+import myLogo from '../images/samLogo.jpg'
 
 export function Intro({ aboutMe, setAboutMe, dark, setDark }) {
   /*  const textRef = useRef()

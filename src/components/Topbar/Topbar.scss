@@ -19,6 +19,7 @@
 
  a {
    text-decoration: none;
+   color: black;
    &:active{
     transform: scale(0.97);
     transition: transform 700ms ease;
