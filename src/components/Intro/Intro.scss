@@ -205,7 +205,8 @@
         position: relative;
         cursor: pointer;
         .click__arrow {
-          opacity: 0;
+          opacity: 1;
+          font-size: 1rem;
         }
       }
     }
