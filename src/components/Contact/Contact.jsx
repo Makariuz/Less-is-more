@@ -1,10 +1,12 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+
 import {
   AiFillCodepenCircle,
   AiFillGithub,
   AiFillTwitterCircle,
+  AiOutlineCoffee,
 } from "react-icons/ai";
 
 import "./Contact.scss";
@@ -12,6 +14,8 @@ import "./Contact.scss";
 export function Contact() {
   const [message, setMessage] = useState(false);
   const [filled, setFilled] = useState(true);
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,6 +51,11 @@ export function Contact() {
         <a href="https://codepen.io/makariuz" target= '_blank' rel="noreferrer">   <AiFillCodepenCircle /> </a> 
           <span>codepen</span>
         </div>
+
+        <div className="links coffee">
+        <a href="https://www.buymeacoffee.com/samueleduardo" target= '_blank' rel="noreferrer"> <AiOutlineCoffee /> </a>
+        <span>buy me a coffee</span>
+        </div>
       </div>
 
       <div className="contact__form">
@@ -75,6 +84,7 @@ export function Contact() {
       <a href="https://github.com/Makariuz" target= '_blank' rel="noreferrer"> <AiFillGithub /> </a>  
       <a href="https://twitter.com/therealmakariuz" target= '_blank' rel="noreferrer">   <AiFillTwitterCircle /> </a> 
       <a href="https://codepen.io/makariuz" target= '_blank' rel="noreferrer">   <AiFillCodepenCircle /> </a> 
+      <a href="https://www.buymeacoffee.com/samueleduardo" target= '_blank' rel="noreferrer"> <AiOutlineCoffee /> </a>
       </div>
     </div>
   );

@@ -29,6 +29,7 @@
     font-size: 3rem;
     color: #f18960;
 
+
   
 
     .links{
@@ -50,6 +51,7 @@
         justify-content: space-evenly;
         font-size: 3rem;
         color: #f18960;
+     
     }
   }
 
@@ -69,6 +71,7 @@
         justify-content: space-evenly;
         font-size: 3rem;
         color: #f18960;
+        margin: 10px;
         @include apple_watch {
           height: 100%;
          
