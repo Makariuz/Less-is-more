@@ -11,11 +11,22 @@
   }
 
   h1 {
-    font-size: 50px;
+    font-family: "Fredericka the Great", cursive;
+    font-size: 4rem;
+    padding: 5px;
 
-    @include mobile {
-      font-size: 20px;
+    &.dark {
+      color: #eee3c1ff;
     }
+
+   @include mobile {
+     font-size: 3rem;
+   }
+   @include apple_watch {
+   
+    font-size: .7rem;
+    overflow: hidden;
+  }
   }
 
   .container {
