@@ -15,8 +15,8 @@ $project_width_min: 600px;
 $project_width_max: 760px; 
 
 
-$apple_watch_min: 197px; 
-$apple_watch_max: 270px; 
+$apple_watch_min: 138px; 
+$apple_watch_max: 279px; 
 
 @mixin mobile {
     @media (max-width: #{$width}){
