@@ -20,7 +20,7 @@ function App() {
     <div className="sections">
       <Intro aboutMe={aboutMe} setAboutMe={setAboutMe}  dark={dark} setDark={setDark}/>
       <Portfolio dark={dark} setDark={setDark}/>
-      {/* <Hobbies dark={dark} setDark={setDark} /> */}
+      <Hobbies dark={dark} setDark={setDark} />
       {/* <Works dark={dark} setDark={setDark}/> */}
       
       <Contact dark={dark} setDark={setDark} />

@@ -10,11 +10,11 @@ export function Menu({menuOpen, setMenuOpen}){
                 <li onClick={() => setMenuOpen(false)}>
                     <a href="#projects"> projects </a>
                 </li>
-               {/*  <li onClick={() => setMenuOpen(false)}>
-                    <a href="#works"> hobbies </a>
-                </li> */}
                 <li onClick={() => setMenuOpen(false)}>
-                    <a href="#contact"> Contact </a>
+                    <a href="#hobbies"> music </a>
+                </li>
+                <li onClick={() => setMenuOpen(false)}>
+                    <a href="#contact"> contact </a>
                 </li>
             </ul>
         </div>

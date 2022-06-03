@@ -27,7 +27,7 @@ export function Topbar({ menuOpen, setMenuOpen, dark, setDark}) {
         <ul className={'menuOptions' + (dark && " dark")}>
         <a href="#intro">  <li>about</li> </a>
         <a href="#projects">   <li>projects</li> </a>
-       {/*  <a href="#hobbies">   <li>hobbies</li> </a> */}
+        <a href="#hobbies">   <li>music</li> </a>
         <a href="#contact">   <li>contact</li> </a>
           </ul>
         </div>
