@@ -118,6 +118,9 @@
     @include mobile {
       display: none;
     }
+    @include tablet {
+      display: none;
+    }
   }
 
   .wrapper {
@@ -148,6 +151,10 @@
           display: none;
         }
 
+        @include tablet {
+          display: none;
+        }
+
         li {
           cursor: pointer;
 
@@ -165,6 +172,10 @@
         cursor: pointer;
 
         @include mobile {
+          display: none;
+        }
+
+        @include tablet {
           display: none;
         }
 
@@ -190,6 +201,10 @@
         cursor: pointer;
 
         @include mobile {
+          display: flex;
+        }
+
+        @include tablet {
           display: flex;
         }
 
