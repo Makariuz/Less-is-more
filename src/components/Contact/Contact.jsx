@@ -40,21 +40,25 @@ export function Contact() {
     <div className="contact" id="contact">
       <div className="socials__acc">
         <div className="links github">
-        <a href="https://github.com/Makariuz" target= '_blank' rel="noreferrer"> <AiFillGithub /> </a>  
-          <span> github</span>
+        <a href="https://github.com/Makariuz" target= '_blank' rel="noreferrer"> <AiFillGithub /> 
+          <span> github</span> 
+          </a>  
         </div>
         <div className="links twitter">
-        <a href="https://twitter.com/therealmakariuz" target= '_blank' rel="noreferrer">   <AiFillTwitterCircle /> </a> 
+        <a href="https://twitter.com/therealmakariuz" target= '_blank' rel="noreferrer">   <AiFillTwitterCircle /> 
           <span> twitter</span>
+          </a> 
         </div>
         <div className="links codepen">
-        <a href="https://codepen.io/makariuz" target= '_blank' rel="noreferrer">   <AiFillCodepenCircle /> </a> 
+        <a href="https://codepen.io/makariuz" target= '_blank' rel="noreferrer">   <AiFillCodepenCircle /> 
           <span>codepen</span>
+          </a> 
         </div>
 
         <div className="links coffee">
-        <a href="https://www.buymeacoffee.com/samueleduardo" target= '_blank' rel="noreferrer"> <AiOutlineCoffee /> </a>
+        <a href="https://www.buymeacoffee.com/samueleduardo" target= '_blank' rel="noreferrer"> <AiOutlineCoffee />
         <span>buy me a coffee</span>
+        </a>
         </div>
       </div>
 
