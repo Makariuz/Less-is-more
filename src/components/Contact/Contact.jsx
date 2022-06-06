@@ -26,6 +26,7 @@ export function Contact() {
         "service_sv14q44",
         "template_l7i0iqd",
         e.target,
+
         "uKw7PIUveGzs75qNQ"
       )
       .then((res) => {

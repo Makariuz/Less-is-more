@@ -30,6 +30,8 @@ export function Topbar({ menuOpen, setMenuOpen, dark, setDark}) {
         <a href="#hobbies">   <li>music</li> </a>
         <a href="#contact">   <li>contact</li> </a>
           </ul>
+
+         
         </div>
 
         <div className="right">
