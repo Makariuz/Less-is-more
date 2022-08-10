@@ -13,6 +13,7 @@ import {
 import img__canva from "../images/bg-canva.png";
 import img__portkey from "../images/bg-portkey.png";
 import img__bee from "../images/bg-bee.png";
+import img__social from '../images/socialtag.png'
 
 export function Portfolio({ dark, setDark }) {
   const [selected, setSelected] = useState("featured");
@@ -90,16 +91,16 @@ export function Portfolio({ dark, setDark }) {
 
         <div className="cards__projects">
           <div className="card__img">
-            <a href="https://portkey1.herokuapp.com/" target= '_blank' rel="noreferrer">
-              <img src={img__portkey} alt="game made with NodeJS + ExpressJs" />
+            <a href="https://socialtag.netlify.app/" target= '_blank' rel="noreferrer">
+              <img src={img__social} alt="game made with React + NodeJS" />
             </a>
           </div>
 
           <div className={"card__title " + (dark && " dark")}>
-            <h2>Portkey</h2>
+            <h2>Social Tag</h2>
             <h3>
-              HTML - CSS - JAVASCRIPT - HANDLEBARS - EXPRESS JS - NODE JS -
-              HEROKU - AUTHENTICATION - API
+              REACT - HTML - CSS - JAVASCRIPT - EXPRESS JS - NODE JS -
+              HEROKU - AUTHENTICATION - API - NETLIFY
             </h3>
           </div>
         </div>
@@ -112,7 +113,7 @@ export function Portfolio({ dark, setDark }) {
           </div>
 
           <div className={"card__title " + (dark && " dark")}>
-            <h2>Rodrigues Bee</h2>
+            <h2>Bee Project</h2>
             <h3>
               REACT - SCSS - JAVASCRIPT - NODE JS - JSONWEBTOKEN - HEROKU -
               NETLIFY - AUTHENTICATION

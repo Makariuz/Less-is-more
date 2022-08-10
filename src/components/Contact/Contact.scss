@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: center;
 
-  a{
+  a {
     text-decoration: none;
     color: #f18960;
-    &:visited{
+    &:visited {
       text-decoration: none;
       color: #f18960;
     }
@@ -29,11 +29,8 @@
     font-size: 3rem;
     color: #f18960;
 
-
-  
-
-    .links a{
-      display:flex;
+    .links a {
+      display: flex;
       flex-direction: column;
       align-items: center;
       span {
@@ -42,46 +39,38 @@
     }
 
     @include mobile {
-       visibility: hidden;
-       height: 10%;
-        width: 100%;
-        display: flex;
-       
-        align-items: center;
-        justify-content: space-evenly;
-        font-size: 3rem;
-        color: #f18960;
-     
+      visibility: hidden;
+      height: 10%;
+      width: 100%;
+      display: flex;
+
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 3rem;
+      color: #f18960;
     }
   }
 
-
-  .socials__mobile{
-      display:none;
+  .socials__mobile {
+    display: none;
   }
-  
+
   @include mobile {
-
     .socials__mobile {
-        height: 10%;
-        width: 100%;
-        display: flex;
-       
-        align-items: center;
-        justify-content: space-evenly;
-        font-size: 3rem;
-        color: #f18960;
-        margin: 10px;
-        @include apple_watch {
-          height: 100%;
-         
-      }
+      height: 10%;
+      width: 100%;
+      display: flex;
 
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 3rem;
+      color: #f18960;
+      margin: 10px;
+      @include apple_watch {
+        height: 100%;
       }
-      
+    }
   }
-
-
 
   .contact__form {
     display: flex;
@@ -95,25 +84,61 @@
     background-color: #f18960;
     background-image: linear-gradient(315deg, #f18960 0%, #f8bc9c 74%);
 
- 
+    /* CHAT BOT */
+
+    .react-chatbot-kit-chat-container {
+      width: 60%;
+      height: 80%;
+    }
+
+    .react-chatbot-kit-chat-inner-container {
+      background-color: black;
+      height: 70%;
+    }
+
+    .react-chatbot-kit-chat-input-form {
+      background-color: black;
+      width: 100%;
+      display: flex;
+    }
+    .react-chatbot-kit-chat-bot-message {
+
+      width: 100%;
+    }
+
+    .react-chatbot-kit-chat-input-container {
+      background-color: black;
+
+    }
+    .react-chatbot-kit-chat-input {
+      width: 70%;
+    }
+
+    .react-chatbot-kit-chat-input-form {
   
+     border-top: 1px solid white;
+      padding: 10px;
+    }
+
+    .react-chatbot-kit-chat-btn-send {
+     
+    }
+
 
     @include mobile {
-        width: 90%;
-        height: 70%;
+      width: 90%;
+      height: 70%;
     }
 
     h2 {
       font-size: 3rem;
       @include mobile {
-     text-align: center;
-     font-size: 2rem;
-     
-    }
-    @include apple_watch {
-      font-size: .9rem;
-     
-  }
+        text-align: center;
+        font-size: 2rem;
+      }
+      @include apple_watch {
+        font-size: 0.9rem;
+      }
     }
 
     form {
@@ -130,21 +155,18 @@
       outline: 1px solid black;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-
       @include tablet {
         width: 60%;
-        }
+      }
       @include mobile {
-          width: 90%;
-          gap: 5px;
-          padding: 10px;
+        width: 90%;
+        gap: 5px;
+        padding: 10px;
       }
 
-     
-
       @include apple_watch {
-       display:none;
-    }
+        display: none;
+      }
 
       label {
         font-size: 1.5rem;
@@ -163,8 +185,6 @@
           color: black;
           font-style: italic;
         }
-
-       
       }
 
       textarea {
@@ -182,8 +202,6 @@
           color: black;
           font-style: italic;
         }
-
-     
       }
 
       button {
@@ -202,19 +220,17 @@
         justify-content: center;
         cursor: pointer;
 
-
-
         @include mobile {
-            padding: 20px 25px;
-            margin: 5px;
-            overflow: hidden;
+          padding: 20px 25px;
+          margin: 5px;
+          overflow: hidden;
         }
 
         &:focus {
           outline: none;
         }
 
-        &:disabled{
+        &:disabled {
           background-color: lightgray;
           color: darkgrey;
         }
@@ -223,7 +239,5 @@
         color: green;
       }
     }
-
-
   }
 }
